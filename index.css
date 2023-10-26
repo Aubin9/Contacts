@@ -1,0 +1,120 @@
+* {
+  text-align: center;
+}
+img {
+  height: 40px;
+  width: 40px;
+}
+img :hover {
+  box-shadow: 0 0 5px blue, 0 0 25px lightblue, 0 0 50px lightblue,
+    0 0 100px lightblue, 0 0 200px lightblue;
+}
+.container {
+  margin: 0 auto;
+}
+.contact_options {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  gap: 15%;
+}
+button {
+  width: 20%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 1px solid lightblue;
+  resize: none;
+  color: black;
+  align-self: center;
+  background-color: blue;
+}
+.contact_option {
+  background: #4b418b;
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  border: 1px solid transparent;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact_option:hover {
+  background: transparent;
+  border-color: #caff4d;
+}
+
+.contact_option a {
+  margin-top: 0.7rem;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input,
+textarea {
+  width: 50%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 1px solid lightblue;
+  resize: none;
+  color: black;
+  align-self: center;
+}
+.circle {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+}
+.circle_email {
+  top: 3rem;
+  left: 3rem;
+}
+.circle_linkedin {
+  top: -0.5rem;
+  left: 20rem;
+}
+.circle_whatsapp {
+  top: 3rem;
+  left: 35rem;
+}
+.circle_github {
+  top: 23rem;
+  left: 3rem;
+}
+.circle_facebook {
+  top: 19.5rem;
+  left: 20rem;
+}
+.circle_twitter {
+  top: 23rem;
+  left: 35rem;
+}
+.circle_youtube {
+  top: 43rem;
+  left: 3rem;
+}
+.circle_portfolio {
+  top: 39.5rem;
+  left: 20rem;
+}
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 600px) {
+  .circle {
+    width: 15rem;
+    height: 15rem;
+  }
+}
