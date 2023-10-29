@@ -1,57 +1,47 @@
-* {
-  text-align: center;
+body {
+  background-color: rgb(185, 146, 72);
 }
 img {
-  height: 40px;
-  width: 40px;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
 }
-img :hover {
+.container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes de largeur égale */
+  grid-gap: 0;
+  margin: 2% 15% 4% 5%;
+}
+.icon {
+  background: #4b418b;
+  width: 15rem;
+  height: 15rem;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-top: 30px;
+  text-align: center;
+  border: 1px solid transparent;
+  /*gap: 1.2rem;
+  
+  flex-direction: column;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  z-index: 1;*/
+}
+.icon:hover {
+  background: transparent;
+  border-color: #caff4d;
   box-shadow: 0 0 5px blue, 0 0 25px lightblue, 0 0 50px lightblue,
     0 0 100px lightblue, 0 0 200px lightblue;
 }
-.container {
-  margin: 0 auto;
-}
-.contact_options {
-  display: flex;
-  flex-direction: column;
-
-  width: 100%;
-  gap: 15%;
-}
-button {
-  width: 20%;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  background: transparent;
-  border: 1px solid lightblue;
-  resize: none;
-  color: black;
-  align-self: center;
-  background-color: blue;
-}
-.contact_option {
-  background: #4b418b;
-  padding: 1.2rem;
-  border-radius: 1.2rem;
-  text-align: center;
-  border: 1px solid transparent;
-
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.contact_option:hover {
-  background: transparent;
-  border-color: #caff4d;
-}
-
-.contact_option a {
+/*
+.icon a {
   margin-top: 0.7rem;
   display: inline-block;
   font-size: 0.8rem;
-}
+}*/
 
 form {
   display: flex;
@@ -65,56 +55,90 @@ textarea {
   padding: 1.5rem;
   border-radius: 0.5rem;
   background: transparent;
-  border: 1px solid lightblue;
+  border: 1px solid black;
   resize: none;
   color: black;
   align-self: center;
 }
-.circle {
-  width: 20rem;
-  height: 20rem;
-  border-radius: 50%;
-  background-color: red;
-  position: absolute;
+input:hover,
+textarea:hover {
+  background: lightcyan;
+  border: 1px solid black;
 }
-.circle_email {
+/*
+.icon_email {
   top: 3rem;
   left: 3rem;
 }
-.circle_linkedin {
+.icon_linkedin {
   top: -0.5rem;
   left: 20rem;
 }
-.circle_whatsapp {
+.icon_whatsapp {
   top: 3rem;
   left: 35rem;
 }
-.circle_github {
+.icon_github {
   top: 23rem;
   left: 3rem;
 }
-.circle_facebook {
+.icon_facebook {
   top: 19.5rem;
   left: 20rem;
 }
-.circle_twitter {
+.icon_twitter {
   top: 23rem;
   left: 35rem;
 }
-.circle_youtube {
+.icon_youtube {
   top: 43rem;
   left: 3rem;
 }
-.circle_portfolio {
+.icon_portfolio {
   top: 39.5rem;
   left: 20rem;
+}*/
+button {
+  width: 20%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 1px solid lightblue;
+  resize: none;
+  color: black;
+  align-self: center;
+  background-color: blue;
 }
+button:hover {
+  background: goldenrod;
+  border-color: #caff4d;
+  box-shadow: 0 0 5px blue, 0 0 25px lightblue, 0 0 50px lightblue,
+    0 0 100px lightblue, 0 0 200px lightblue;
+}
+
+footer {
+  background-color: black;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 10px;
+}
+
+p {
+  color: #666;
+}
+
 @media screen and (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 600px) {
-  .circle {
-    width: 15rem;
-    height: 15rem;
+  .icon {
+    width: 10rem;
+    height: 10rem;
+  }
+  .container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
