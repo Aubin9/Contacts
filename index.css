@@ -121,8 +121,15 @@ footer {
   padding: 10px 0;
   text-align: center;
   margin-top: 10px;
+  position: static;
 }
-
+.foot {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
 p {
   color: #666;
 }
@@ -135,8 +142,8 @@ p {
 
 @media screen and (max-width: 600px) {
   .icon {
-    width: 10rem;
-    height: 10rem;
+    width: 7rem;
+    height: 7rem;
   }
   .container {
     grid-template-columns: repeat(2, 1fr);
