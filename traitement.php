@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   // Envoyer l'e-mail
   if (mail($to, $subject, $body, $headers)) {
+    
     echo 'Votre message a été envoyé avec succès.';
   } else {
     echo 'Une erreur est survenue lors de l\'envoi du message. Veillez svp verrifier vos informations et reeseiller';

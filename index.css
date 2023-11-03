@@ -1,34 +1,48 @@
 body {
-  background-color: rgb(185, 146, 72);
+  /*background-color: rgb(185, 146, 72);*/
+  background-color: #121e44;
+  font-family: Arial, sans-serif;
 }
 img {
   height: 80%;
   width: 80%;
-  border-radius: 50%;
+}
+.frame {
+  position: absolute;
+  display: block;
+  top: 0;
+  background-color: #fafcfd;
+  border-radius: 30px;
+
+  margin-top: 0;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .container {
   text-align: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes de largeur égale */
-  grid-gap: 0;
-  margin: 2% 15% 4% 5%;
+  grid-gap: 4px;
+  margin-top: 30px;
+  margin-left: 18%;
+  margin-right: 10%;
 }
 .icon {
-  background: #4b418b;
-  width: 15rem;
-  height: 15rem;
+  background-color: #4b418b;
+  width: 100px;
+  height: 100px;
   padding: 1rem;
   border-radius: 50%;
   margin-top: 30px;
   text-align: center;
   border: 1px solid transparent;
-  /*gap: 1.2rem;
-  
-  flex-direction: column;
-  position: relative;
-  top: 10px;
-  left: 10px;
-  z-index: 1;*/
+  z-index: 1;
+}
+.icon > h4 {
+  margin-top: 2.1rem;
+}
+.icon_facebook > img {
+  border-radius: 50%;
 }
 .icon:hover {
   background: transparent;
@@ -36,6 +50,7 @@ img {
   box-shadow: 0 0 5px blue, 0 0 25px lightblue, 0 0 50px lightblue,
     0 0 100px lightblue, 0 0 200px lightblue;
 }
+
 /*
 .icon a {
   margin-top: 0.7rem;
@@ -47,11 +62,14 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  margin-top: 90px;
+  position: relative;
+  z-index: 1;
 }
 
 input,
 textarea {
-  width: 50%;
+  width: 55%;
   padding: 1.5rem;
   border-radius: 0.5rem;
   background: transparent;
@@ -65,42 +83,10 @@ textarea:hover {
   background: lightcyan;
   border: 1px solid black;
 }
-/*
-.icon_email {
-  top: 3rem;
-  left: 3rem;
-}
-.icon_linkedin {
-  top: -0.5rem;
-  left: 20rem;
-}
-.icon_whatsapp {
-  top: 3rem;
-  left: 35rem;
-}
-.icon_github {
-  top: 23rem;
-  left: 3rem;
-}
-.icon_facebook {
-  top: 19.5rem;
-  left: 20rem;
-}
-.icon_twitter {
-  top: 23rem;
-  left: 35rem;
-}
-.icon_youtube {
-  top: 43rem;
-  left: 3rem;
-}
-.icon_portfolio {
-  top: 39.5rem;
-  left: 20rem;
-}*/
+
 button {
   width: 20%;
-  padding: 0.5rem;
+  padding: 0.7rem;
   border-radius: 0.5rem;
   background: transparent;
   border: 1px solid lightblue;
@@ -110,7 +96,7 @@ button {
   background-color: blue;
 }
 button:hover {
-  background: goldenrod;
+  background: transparent;
   border-color: #caff4d;
   box-shadow: 0 0 5px blue, 0 0 25px lightblue, 0 0 50px lightblue,
     0 0 100px lightblue, 0 0 200px lightblue;
@@ -121,7 +107,9 @@ footer {
   padding: 10px 0;
   text-align: center;
   margin-top: 10px;
-  position: static;
+  position: sticky;
+  top: 50%;
+  left: 50%;
 }
 .foot {
   max-width: 960px;
@@ -134,6 +122,31 @@ p {
   color: #666;
 }
 
+.icon_email {
+  background-color: #0000ff;
+}
+.icon_linkedin {
+  background-color: #0077b5;
+}
+.icon_whatsapp {
+  background-color: green;
+}
+.icon_github {
+  background-color: #24292e;
+}
+.icon_facebook {
+  background-color: #3b5998;
+}
+.icon_twitter {
+  background-color: #1da1f2;
+}
+.icon_youtube {
+  background-color: #ff0000;
+}
+.icon_portfolio {
+  background-color: #ff6600;
+}
+
 @media screen and (max-width: 1024px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
@@ -142,8 +155,12 @@ p {
 
 @media screen and (max-width: 600px) {
   .icon {
-    width: 7rem;
-    height: 7rem;
+    width: 90px;
+    height: 90px;
+  }
+  .frame {
+    margin-left: 3%;
+    margin-right: 3%;
   }
   .container {
     grid-template-columns: repeat(2, 1fr);
