@@ -2,14 +2,17 @@ body {
   /*background-color: rgb(185, 146, 72);*/
   background-color: #121e44;
   font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
 }
 img {
   height: 80%;
   width: 80%;
 }
 .frame {
-  position: absolute;
-  display: block;
+  position: absolute; 
+  display: flex;
+  flex-direction: column;
   top: 0;
   background-color: #e5eaec;
   border-radius: 30px;
@@ -21,14 +24,17 @@ img {
 .container {
   text-align: center;
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes de largeur égale */
   grid-gap: 4px;
-  margin-top: 30px;
-  margin-left: 18%;
+  margin-top: 20px;
+  margin-left: 10%;
   margin-right: 10%;
-  align-items: center;
 }
 .icon {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   background-color: #4b418b;
   width: 100px;
   height: 100px;
@@ -86,7 +92,7 @@ textarea:hover {
 }
 
 button {
-  width: 20%;
+  width: 25%;
   padding: 0.7rem;
   border-radius: 0.5rem;
   background: transparent;
