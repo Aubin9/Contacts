@@ -9,25 +9,61 @@ img {
   height: 80%;
   width: 80%;
 }
-.frame {
+.pp {
+  height: 185px; 
+  width: 185px;
+  border-radius: 100px; 
   position: absolute; 
+  left: 40%; 
+  top: 45px; 
+  z-index: 1;
+}
+/* .center-title{
+  position: relative;
+  top: 40px;
+} */
+.frame {
+  position: relative; 
   display: flex;
   flex-direction: column;
   top: 0;
   background-color: #e5eaec;
   border-radius: 30px;
+  width: 75%;
 
   margin-top: 0;
   margin-left: 10%;
   margin-right: 10%;
 }
+.triangle{
+  position: relative;
+  /* overflow: hidden;  */
+ } 
+ .triangle::before, .triangle::after{
+    background-color: white; 
+    content: ""; 
+    height: 100px; 
+    position: absolute; 
+    width: 60%; 
+    z-index: 0; 
+    top: 1px;
+    overflow: hidden;
+ } 
+ .triangle::before{
+  left: -45px; 
+  transform: rotate(10deg) scaleY(1.25); 
+ } 
+ .triangle::after{
+  right: -45px; 
+  transform: rotate(-10deg) scaleY(1.25); 
+ } 
 .container {
   text-align: center;
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes de largeur égale */
   grid-gap: 4px;
-  margin-top: 20px;
+  margin-top: 25%;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -92,7 +128,7 @@ textarea:hover {
 }
 
 button {
-  width: 25%;
+  width: max-content;
   padding: 0.7rem;
   border-radius: 0.5rem;
   background: transparent;
@@ -162,8 +198,8 @@ p {
 
 @media screen and (max-width: 600px) {
   .icon {
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
   }
   .frame {
     margin-left: 3%;
@@ -171,8 +207,18 @@ p {
   }
   .container {
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 70%;
   }
   svg {
     display: none;
   }
+  .pp {
+    height: 130px; 
+    width: 130px;
+    left: 23%; 
+  }
+  .triangle::before, .triangle::after{
+    height: 90px; 
+    width: 90%; 
+ } 
 }
